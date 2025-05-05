@@ -1,0 +1,253 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  --primary-color: #211c84;
+  --secondary-color: #ffffff;
+  --primary-hover: #3a2fb5;
+  --border-radius: 50px;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1728px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    ),
+    url('/images/BookLovers.png') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+/* Header Navigation */
+.flex-row-f {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.nooks {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(166.01deg, #ffffff, #f3a2a2);
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.home,
+.service,
+.contact-us {
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.home:hover,
+.service:hover,
+.contact-us:hover {
+  opacity: 0.8;
+}
+
+/* Page Title */
+.pembelian-buku {
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Purchase Form */
+.rectangle-3 {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  border: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 0 1.5rem;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--primary-hover);
+  box-shadow: 0 0 0 3px rgba(33, 28, 132, 0.1);
+}
+
+.input-field::placeholder {
+  color: #9d9d9d;
+  opacity: 0.8;
+}
+
+/* Submit Button */
+.beli-button {
+  width: 100%;
+  max-width: 300px;
+  height: 60px;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 2rem auto;
+  display: block;
+}
+
+.beli-button:hover {
+  background: var(--primary-hover);
+}
+
+/* Decorative Images */
+.empty,
+.empty-1,
+.empty-2,
+.empty-div,
+.empty-div-8,
+.empty-div-9 {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+  width: 200px;
+  height: 200px;
+  background: url('/images/BookFlower.png') no-repeat center;
+  background-size: contain;
+}
+
+.empty-1 {
+  background-image: url('/images/BookGlass.png');
+  top: 20%;
+  right: 5%;
+}
+
+.empty-2 {
+  background-image: url('/images/BookMusic.png');
+  bottom: 10%;
+  left: 5%;
+}
+
+.empty-div {
+  background-image: url('/images/BookPurple.png');
+  top: 50%;
+  right: 15%;
+  transform: rotate(45deg);
+}
+
+.empty-div-8 {
+  background-image: url('/images/Purple.png');
+  bottom: 20%;
+  right: 10%;
+  transform: rotate(-30deg);
+}
+
+.empty-div-9 {
+  background-image: url('/images/WhiteBorder.png');
+  top: 30%;
+  left: 10%;
+  transform: rotate(15deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .rectangle-3 {
+    margin: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-row-f {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .home,
+  .service,
+  .contact-us {
+    margin: 0.5rem;
+  }
+
+  .pembelian-buku {
+    font-size: 2.5rem;
+  }
+
+  .rectangle-3 {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 1rem;
+  }
+
+  .pembelian-buku {
+    font-size: 2rem;
+  }
+
+  .form-label {
+    font-size: 1.25rem;
+  }
+
+  .input-field {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .beli-button {
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
